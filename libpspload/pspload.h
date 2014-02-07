@@ -6,6 +6,11 @@
 #ifndef _PSPLOAD_H_
 #define _PSPLOAD_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 enum pspload_status {
     PSPLOAD_STATUS_NET_DISCONNECTED,
     PSPLOAD_STATUS_NET_CONNECTING,
@@ -32,5 +37,10 @@ int  pspload_connect(int config_n);
 void pspload_set_load_addr(void *load_addr);
 void pspload_set_argv_p(char *argv_p);
 void pspload_set_event_cb(pspload_event_cb cb, void *usrdata);
+
+#ifdef __cplusplus
+}
+#endif
+
 
 #endif
